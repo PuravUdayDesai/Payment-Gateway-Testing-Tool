@@ -1,5 +1,5 @@
 # [Payment-Gateway-Testing-Tool](https://testing-tool-755b7.web.app/)
-COEP college Software Engineering mini-project
+COEP college Software Engineering-I mini-project
 
 # Tech Stack
 - HTML
