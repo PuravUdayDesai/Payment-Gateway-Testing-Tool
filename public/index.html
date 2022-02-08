@@ -1,0 +1,362 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="shortcut icon" href="https://www.coep.org.in/sites/default/files/coep_logo_0.jpg" type="image/jpeg">
+    <title>Payment Gateway</title>
+</head>
+
+<body>
+    <nav class="navbar has-shadow is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                <img src="https://www.coep.org.in/sites/default/files/coep_new_logo.png"
+                    style="max-width: 325px; max-height: 100px;">
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-success is-outlined" id="ToolKit">
+                            <span class="icon">
+                                <ion-icon name="bulb-sharp"></ion-icon>
+                            </span>
+                            <span>Project</span>
+                        </a>
+                        <a class="button is-info is-outlined" id="ToolKit" href="help.html">
+                            <span class="icon">
+                                <ion-icon name="information-circle-sharp"></ion-icon>
+                            </span>
+                            <span>Help</span>
+                        </a>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="columns is-desktop is-multiline ml-3 mr-3 mt-6 pt-6">
+        <div class="column is-one-third">
+            <div class="columns is-vcentered is-desktop is-multiline">
+                <div class="column is-full">
+                    <div class="field">
+                        <p class="help is-dark">MIS Number</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="MIS Number" id="MISNumberTextField" required>
+                            <span class="icon is-small is-left">
+                                <ion-icon name="id-card-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field">
+                        <p class="help is-dark">Full Name</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="Full Name" id="FullNameTextField" required>
+                            <span class="icon is-small is-left">
+                                <ion-icon name="person-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field">
+                        <p class="help is-dark">EmailId</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" placeholder="Email" id="EmailIdTextField" required>
+                            <span class="icon is-small is-left">
+                                <ion-icon name="mail-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field">
+                        <p class="help is-dark">Contact Number</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="tel" placeholder="Contact Number" maxlength="10"
+                                id="ContactNumberTextField" required>
+                            <span class="icon is-small is-left">
+                                <ion-icon name="call-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field">
+                        <p class="help is-dark">Date of Birth</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="DD/MM/YYYY" maxlength="10"
+                                id="DateofBirthTextField" required>
+                            <span class="icon is-small is-left">
+                                <ion-icon name="calendar-number-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field">
+                        <p class="help is-dark">Department Name</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="Department Name" id="DepartmentNameTextField"
+                                required>
+                            <span class="icon is-small is-left">
+                                <ion-icon name="school-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field">
+                        <p class="help is-dark">Academic Year</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="2021-22" maxlength="7"
+                                id="AcademicYearTextField" required>
+                            <span class="icon is-small is-left">
+                                <ion-icon name="calendar-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field">
+                        <p class="help is-dark">Fee Category</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="Fee Category" id="FeeCategoryTextField">
+                            <span class="icon is-small is-left">
+                                <ion-icon name="people-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-one-third">
+            <div class="columns is-vcentered is-desktop is-multiline">
+                <div class="column is-full">
+                    <div class="field">
+                        <p class="help is-dark">Total Fees</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="number" placeholder="Total Fees" id="TotalFeesTextField" required>
+                            <span class="icon is-small is-left">
+                                <ion-icon name="wallet-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full mt-5">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a class="button is-static">
+                                ₹
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" type="number" placeholder="Tution Fees" id="TutionFeesTextField">
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a class="button is-static">
+                                ₹
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" type="number" placeholder="Development Fees"
+                                id="DevelopmentFeesTextField">
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a class="button is-static">
+                                ₹
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" type="number" placeholder="Gymkhana Fees" id="GymkhanaFeesTextField">
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a class="button is-static">
+                                ₹
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" type="number" placeholder="Training and Placement Fees"
+                                id="TrainingFeesTextField">
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a class="button is-static">
+                                ₹
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" type="number" placeholder="Internet and Email Fees"
+                                id="InternetFeesTextField">
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a class="button is-static">
+                                ₹
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" type="number" placeholder="Boat Club Fees" id="BoatClubFeesTextField">
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a class="button is-static">
+                                ₹
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" type="number" placeholder="Examination Fees"
+                                id="ExaminationFeesTextField">
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a class="button is-static">
+                                ₹
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" type="number" placeholder="Other Fees 1" id="OtherFees1TextField">
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field has-addons">
+                        <p class="control">
+                            <a class="button is-static">
+                                ₹
+                            </a>
+                        </p>
+                        <p class="control">
+                            <input class="input" type="number" placeholder="Other Fees 2" id="OtherFees2TextField">
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="columns is-vcentered is-desktop is-multiline">
+                <div class="column is-full"
+                    style="background-color: rgb(248, 231, 179); border-radius: 15px 15px 0px 0px;">
+                    <div class="field">
+                        <p class="help is-dark">Card Number</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="Card Number" maxlength="16"
+                                id="CardNumberTextField" required>
+                            <span class="icon is-small is-left">
+                                <ion-icon name="card-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full" style="background-color: rgb(248, 231, 179);">
+                    <div class="field">
+                        <p class="help is-dark">Card Holder Name</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="Card Holder Name" id="CardHolderNameTextField"
+                                required>
+                            <span class="icon is-small is-left">
+                                <ion-icon name="person-circle-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full" style="background-color: rgb(248, 231, 179);">
+                    <div class="field">
+                        <p class="help is-dark">Expiration Date</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="text" placeholder="MM/YY" maxlength="5"
+                                id="ExpirationDateTextField" required>
+                            <span class="icon is-small is-left">
+                                <ion-icon name="card-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full"
+                    style="background-color: rgb(248, 231, 179); border-radius: 0px 0px 15px 15px;">
+                    <div class="field">
+                        <p class="help is-dark">CVV</p>
+                        <p class="control has-icons-left has-icons-right">
+                            <input class="input" type="password" placeholder="CVV" maxlength="3" id="CVVTextField"
+                                required>
+                            <span class="icon is-small is-left">
+                                <ion-icon name="key-outline"></ion-icon>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field">
+                        <p class="help is-dark">Remarks</p>
+                        <p class="control">
+                            <textarea class="textarea" placeholder="Remarks" id="RemarksTextField"></textarea>
+                        </p>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="field">
+                        <div class="control">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                I agree to the <a href="#">terms and conditions</a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-full">
+                    <div class="columns is-vcentered is-desktop is-multiline">
+                        <div class="column is-full">
+                            <button type="submit" class="button is-success is-medium" style="width: 100%;"
+                                id="PayNow">Pay Now</button>
+                        </div>
+                        <div class="column is-full">
+                            <button class="button is-danger is-light is-small" style="width: 100%;"
+                                id="Cancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+<script src="test.js"></script>
+</html>
